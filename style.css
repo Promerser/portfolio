@@ -79,12 +79,6 @@
   line-height: 130%;
 }
 
-.second_top p {
-  font-family: "ibm_plex_mono";
-  font-size: 12px;
-  line-height: 100%;
-  letter-spacing: 0.78px;
-}
 body {
   background-color: #060606;
   color: #ffffff;
@@ -176,13 +170,13 @@ a {
   gap: 32px;
 }
 
-.second_top {
+.second_left {
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: flex-start;
+  flex-direction: column;
+  gap: 2px;
 
   position: sticky;
+  align-self: start;
   top: 50px;
 }
 
@@ -190,10 +184,6 @@ a {
   display: flex;
   flex-direction: column;
   gap: 32px;
-
-  position: sticky;
-  align-self: start;
-  top: 130px;
 }
 
 .second_main_content {
@@ -232,6 +222,11 @@ a {
   top: 60px;
 
   margin-bottom: 17px;
+
+  font-family: "ibm_plex_mono";
+  font-size: 12px;
+  line-height: 100%;
+  letter-spacing: 0.78px;
 }
 img {
   max-width: 100%;
