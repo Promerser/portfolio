@@ -157,6 +157,49 @@ a {
   color: #ffffff;
 }
 
+.scroll_button span:last-child {
+  position: relative;
+  display: block;
+  width: 1px;
+  height: 66px;
+}
+
+.scroll_button span:last-child::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 1px;
+  height: 66px;
+  background-color: #f4f4f4;
+  opacity: 0.32;
+}
+
+.scroll_button span:last-child::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 1px;
+  height: 5px;
+  background-color: #ffffff;
+  animation: scrollLine 1.33s ease-in-out infinite;
+}
+
+@keyframes scrollLine {
+  0% {
+    top: 0;
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    top: 61px;
+    opacity: 0;
+  }
+}
+
 .second {
   display: flex;
   flex-direction: column;
