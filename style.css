@@ -252,6 +252,42 @@ a {
   justify-content: space-between;
 }
 
+.second_main_text_sides h2 {
+  font-family: "unbounded";
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 120%;
+  letter-spacing: 1%;
+  text-transform: uppercase;
+}
+
+.second_main_text_sides p {
+  font-family: "ibm_plex_mono";
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 120%;
+  letter-spacing: 5%;
+  text-transform: uppercase;
+}
+
+.second_main_text > p {
+  font-family: "onest";
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 120%;
+  letter-spacing: 1%;
+  opacity: 0.82;
+}
+
+.second a {
+  font-family: "ibm_plex_mono";
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 120%;
+  letter-spacing: 3%;
+  text-transform: uppercase;
+}
+
 .second_other {
   display: flex;
   flex-direction: column;
