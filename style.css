@@ -223,6 +223,7 @@ a {
   position: sticky;
   align-self: start;
   top: 50px;
+  max-height: calc(100vh - 100px);
 }
 
 .second_main {
@@ -239,6 +240,25 @@ a {
 
 .second_main_content img {
   border-radius: 16px;
+}
+
+.second_left .second_main,
+.second_left .second_main_content {
+  min-height: 0;
+}
+
+.second_left .second_main_content > a:first-child {
+  flex-shrink: 1;
+  min-height: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.second_left .second_main_content > a:first-child img {
+  flex: 1;
+  min-height: 0;
+  width: 100%;
+  object-fit: cover;
 }
 
 .second_main_text {
