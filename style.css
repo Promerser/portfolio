@@ -80,9 +80,13 @@
   line-height: 130%;
 }
 
+html,
 body {
   background-color: #060606;
-  color: #ffffff;
+}
+
+body {
+  color: #F4F4F4;
 }
 
 header {
@@ -289,6 +293,7 @@ a {
   line-height: 120%;
   letter-spacing: 5%;
   text-transform: uppercase;
+  opacity: 0.6;
 }
 
 .second_main_text > p {
@@ -298,6 +303,10 @@ a {
   line-height: 120%;
   letter-spacing: 1%;
   opacity: 0.82;
+}
+
+.second_main_content > a:last-child {
+  opacity: 0.65;
 }
 
 .second a {
@@ -420,6 +429,8 @@ img {
 }
 
 footer {
+  color: #F4F4F4;
+
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -441,8 +452,12 @@ footer div {
   gap: 19px;
 }
 
-footer a {
+footer p {
   opacity: 0.82;
+}
+
+footer a {
+  opacity: 0.6;
 }
 
 .menu {

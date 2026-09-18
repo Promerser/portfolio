@@ -27,7 +27,7 @@ h1 {
 
 .filters button {
   color: #F4F4F4;
-  opacity: 0.82;
+  opacity: 0.65;
   font-family: 'IBM Plex Mono', monospace;
   font-weight: 500;
   font-size: 16px;
@@ -42,6 +42,7 @@ h1 {
 
 .filters button.active {
   border: 1px solid;
+  border-radius: 999px;
 }
 
 .projects {
@@ -92,7 +93,6 @@ h1 {
 
 .project_card a {
   color: #F4F4F4;
-  opacity: 0.65;
   font-family: 'IBM Plex Mono', monospace;
   font-weight: 500;
   font-size: 16px;
@@ -100,4 +100,8 @@ h1 {
   letter-spacing: 0.03em;
   text-transform: uppercase;
   text-decoration: none;
+}
+
+.project_card > a:last-child {
+  opacity: 0.65;
 }

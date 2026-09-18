@@ -6,8 +6,7 @@ menuButton.addEventListener("click", () => {
 });
 
 menu.querySelectorAll(".menu_left a").forEach((link) => {
-  link.addEventListener("click", (e) => {
-    e.preventDefault();
+  link.addEventListener("click", () => {
     menu.classList.remove("open");
   });
 });
