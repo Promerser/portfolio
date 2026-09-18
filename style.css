@@ -218,7 +218,7 @@ a {
 .second_left {
   display: flex;
   flex-direction: column;
-  gap: 2px;
+  gap: 60px;
 
   position: sticky;
   align-self: start;
@@ -322,7 +322,7 @@ a {
   position: sticky;
   top: 60px;
 
-  margin-bottom: 41px;
+  margin-bottom: 99px;
 
   font-family: "ibm_plex_mono";
   font-size: 12px;
@@ -444,3 +444,93 @@ footer div {
 footer a {
   opacity: 0.82;
 }
+
+.menu {
+  position: fixed;
+  inset: 0;
+  z-index: 900;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  padding: 100px 64px 40px;
+
+  background-color: #060606;
+
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.menu.open {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+
+.menu_top {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+
+  flex: 1;
+}
+
+.menu_left {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 24px;
+}
+
+.menu_left a {
+  font-family: "unbounded";
+  font-weight: 600;
+  font-size: 120px;
+  line-height: 130%;
+  letter-spacing: 1%;
+  text-transform: uppercase;
+}
+
+.menu_right {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 32px;
+}
+
+.menu_block {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 8px;
+}
+
+.menu_label {
+  font-family: "ibm_plex_mono";
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 120%;
+  letter-spacing: 5%;
+  text-transform: uppercase;
+  opacity: 0.82;
+}
+
+.menu_block a,
+.menu_block p:not(.menu_label) {
+  font-family: "onest";
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 120%;
+}
+
+.menu_socials {
+  display: flex;
+  flex-direction: row;
+  gap: 19px;
+}
+
+

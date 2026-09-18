@@ -1,0 +1,47 @@
+.works {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+
+  padding: 100px 64px 64px;
+}
+
+.filters {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+
+  padding-bottom: 24px;
+  border-bottom: 1px solid;
+}
+
+.filter {
+  padding: 12px 16px;
+  border-radius: 999px;
+}
+
+.filter.active {
+  border: 1px solid;
+}
+
+.projects {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
+}
+
+.project_card {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.project_card img {
+  border-radius: 16px;
+}
+
+.project_info {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
