@@ -37,7 +37,10 @@
 }
 
 .project_card img {
-  border-radius: 16px;
+  width: 570px;
+  height: 392px;
+  border-radius: 14px;
+  object-fit: cover;
 }
 
 .project_info {
