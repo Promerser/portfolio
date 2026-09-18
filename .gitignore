@@ -1,2 +1,16 @@
 FIGMA_ERRORS.md
 TODO.md
+
+# Figma reference screenshots
+1920 обо мне.jpg
+1920 обо мне.png
+1920 работы.jpg
+
+# Unused font files (only variable fonts + IBM Plex Mono Regular/Bold are used)
+fonts/IBM_Plex_Mono/*
+!fonts/IBM_Plex_Mono/OFL.txt
+!fonts/IBM_Plex_Mono/IBMPlexMono-Regular.ttf
+!fonts/IBM_Plex_Mono/IBMPlexMono-Bold.ttf
+
+fonts/Onest/static/
+fonts/Unbounded/static/

@@ -82,11 +82,11 @@
 
 html,
 body {
-  background-color: #060606;
+  background-color: #0f0f0f;
 }
 
 body {
-  color: #F4F4F4;
+  color: #f4f4f4;
 }
 
 header {
@@ -429,7 +429,7 @@ img {
 }
 
 footer {
-  color: #F4F4F4;
+  color: #f4f4f4;
 
   display: flex;
   flex-direction: row;
@@ -476,7 +476,9 @@ footer a {
   opacity: 0;
   visibility: hidden;
   pointer-events: none;
-  transition: opacity 0.3s ease, visibility 0.3s ease;
+  transition:
+    opacity 0.3s ease,
+    visibility 0.3s ease;
 }
 
 .menu.open {
@@ -547,5 +549,3 @@ footer a {
   flex-direction: row;
   gap: 19px;
 }
-
-
