@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ПРОЕКТ</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="project.css" />
+  </head>
+  <body>
+    <header>
+      <p>ДИНАРА СИРАЗТДИНОВА</p>
+      <button>
+        <img src="content/icons/Theme_changer.svg" alt=" theme changer" />
+      </button>
+      <button id="menu_button">
+        <img src="content/icons/Button - Menu.svg" alt="" />
+      </button>
+    </header>
+    <nav class="menu" id="menu">
+      <div class="menu_top">
+        <div class="menu_left">
+          <a href="index.html">ГЛАВНАЯ</a>
+          <a href="works.html">РАБОТЫ</a>
+          <a href="about.html">ОБО МНЕ</a>
+        </div>
+        <div class="menu_right">
+          <div class="menu_block">
+            <p class="menu_label">EMAIL</p>
+            <a href="mailto:dinara.sir2003@gmail.com"
+              >dinara.sir2003@gmail.com</a
+            >
+          </div>
+          <div class="menu_block">
+            <p class="menu_label">ССЫЛКИ НА СОЦ.СЕТИ</p>
+            <div class="menu_socials">
+              <a href="">Telegram</a>
+              <a href="">Behance</a>
+              <a href="">ВК</a>
+            </div>
+          </div>
+          <div class="menu_block">
+            <p class="menu_label">МЕСТО ЖИТЕЛЬСТВА</p>
+            <p>Россия, г.Казань</p>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <main>
+      <section class="project_page">
+        <p class="project_breadcrumb">
+          <span id="bc_category"></span>
+          <span id="bc_separator">·</span>
+          <span id="bc_year"></span>
+        </p>
+
+        <div class="project_hero">
+          <div class="project_hero_text">
+            <h1 class="project_title" id="project_title"></h1>
+            <div class="project_desc" id="project_desc"></div>
+          </div>
+          <div class="project_hero_image" id="project_hero_image"></div>
+        </div>
+
+        <div class="project_info" id="project_info">
+          <div class="project_info_rows" id="project_info_rows">
+            <div class="project_info_row" id="info_task">
+              <h3>ЗАДАЧА</h3>
+              <p></p>
+            </div>
+            <div class="project_info_row" id="info_solution">
+              <h3>РЕШЕНИЕ</h3>
+              <p></p>
+            </div>
+            <div class="project_info_row" id="info_result">
+              <h3>РЕЗУЛЬТАТ</h3>
+              <p></p>
+            </div>
+          </div>
+        </div>
+
+        <div class="project_gallery" id="project_gallery"></div>
+      </section>
+    </main>
+    <footer>
+      <p>DESIGN BY @NOTDAY • DEV BY @FROMER5ER</p>
+      <div>
+        <a href="">TELEGRAMM</a>
+        <a href="">BEHANCE</a>
+        <a href="">ВК</a>
+      </div>
+    </footer>
+    <script src="script.js"></script>
+    <script src="projects.js"></script>
+    <script src="project.js"></script>
+  </body>
+</html>

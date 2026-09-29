@@ -1,0 +1,210 @@
+.project_page {
+  display: flex;
+  flex-direction: column;
+  padding: 165px 64px;
+}
+
+.project_breadcrumb {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+
+  margin-bottom: 42px;
+  padding-bottom: 32px;
+  border-bottom: 1px solid rgba(244, 244, 244, 0.32);
+
+  font-family: "ibm_plex_mono";
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 130%;
+  letter-spacing: 1%;
+  text-transform: uppercase;
+  opacity: 0.65;
+}
+
+#bc_category,
+#bc_year {
+  font-family: "ibm_plex_mono";
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 130%;
+  letter-spacing: 1%;
+  vertical-align: middle;
+  text-transform: uppercase;
+}
+
+.project_hero {
+  display: grid;
+  grid-template-columns: 1fr 656px;
+  gap: 48px;
+  align-items: start;
+
+  margin-bottom: 90px;
+}
+
+.project_hero_text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 17px;
+  min-height: 100%;
+}
+
+.project_title {
+  font-family: "unbounded";
+  font-weight: 600;
+  font-size: 64px;
+  line-height: 130%;
+  letter-spacing: 1%;
+  text-transform: uppercase;
+}
+
+.project_desc {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+
+  font-family: "onest";
+  font-weight: 500;
+  font-size: 22px;
+  line-height: 130%;
+  letter-spacing: 1%;
+  opacity: 0.82;
+}
+
+.project_figma_link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+
+  width: 284px;
+  height: 45px;
+  padding: 12px 20px;
+  border: 1px solid;
+  border-radius: 999px;
+
+  font-family: "ibm_plex_mono";
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 120%;
+  letter-spacing: 3%;
+  vertical-align: middle;
+  text-transform: uppercase;
+}
+
+.project_hero_image {
+  width: 656px;
+  height: 450px;
+  border-radius: 14px;
+  overflow: hidden;
+}
+
+.project_hero_image .placeholder {
+  aspect-ratio: auto;
+  height: 100%;
+}
+
+.project_info {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+
+  margin-bottom: 90px;
+}
+
+.project_info.hidden {
+  display: none;
+}
+
+.project_info_rows {
+  border-bottom: 1px solid rgba(244, 244, 244, 0.32);
+}
+
+.project_info_row {
+  display: grid;
+  grid-template-columns: 240px 1fr;
+  gap: 48px;
+
+  padding: 32px 0;
+  border-top: 1px solid rgba(244, 244, 244, 0.32);
+}
+
+.project_info_row h3 {
+  font-family: "ibm_plex_mono";
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 130%;
+  letter-spacing: 1%;
+  vertical-align: middle;
+  text-transform: uppercase;
+  opacity: 0.6;
+}
+
+.project_info_row p {
+  font-family: "onest";
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 130%;
+  letter-spacing: 1%;
+  vertical-align: middle;
+  opacity: 0.82;
+}
+
+.project_info_content {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.project_info_list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding-left: 20px;
+  list-style: disc;
+
+  font-family: "onest";
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 130%;
+  letter-spacing: 1%;
+  opacity: 0.82;
+}
+
+.project_gallery {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+}
+
+.gallery_item {
+  border-radius: 16px;
+  overflow: hidden;
+}
+
+.gallery_item.full {
+  grid-column: 1 / -1;
+}
+
+.placeholder {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 100%;
+  aspect-ratio: 3 / 2;
+  background-color: rgba(244, 244, 244, 0.06);
+
+  font-family: "ibm_plex_mono";
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 120%;
+  letter-spacing: 3%;
+  text-transform: uppercase;
+  opacity: 0.45;
+}
+
+.gallery_item.full .placeholder {
+  aspect-ratio: 16 / 9;
+}
