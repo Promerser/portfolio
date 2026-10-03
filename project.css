@@ -35,7 +35,7 @@
 
 .project_hero {
   display: grid;
-  grid-template-columns: 1fr 656px;
+  grid-template-columns: minmax(0, 1fr) 656px;
   gap: 48px;
   align-items: start;
 
@@ -48,6 +48,7 @@
   justify-content: center;
   gap: 17px;
   min-height: 100%;
+  min-width: 0;
 }
 
 .project_title {
@@ -103,6 +104,12 @@
 .project_hero_image .placeholder {
   aspect-ratio: auto;
   height: 100%;
+}
+
+.project_hero_image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .project_info {
@@ -175,16 +182,72 @@
 .project_gallery {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 24px;
+  gap: 40px 20px;
 }
 
 .gallery_item {
+  position: relative;
+  height: 600px;
   border-radius: 16px;
   overflow: hidden;
 }
 
 .gallery_item.full {
   grid-column: 1 / -1;
+  height: auto;
+}
+
+.gallery_item_scroll {
+  height: 100%;
+  overflow-y: auto;
+  scrollbar-width: thin;
+  scrollbar-color: rgba(244, 244, 244, 0.32) transparent;
+}
+
+.gallery_item img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.scroll_indicator {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+
+  width: 134px;
+  height: 46px;
+  border-radius: 999px;
+  background-color: #030303;
+  opacity: 0.8;
+
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+}
+
+.gallery_item:hover .scroll_indicator {
+  opacity: 0;
+}
+
+.scroll_indicator span {
+  font-family: "ibm_plex_mono";
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 120%;
+  letter-spacing: 3%;
+  vertical-align: middle;
+  text-transform: uppercase;
+}
+
+.scroll_indicator img {
+  width: 16px;
+  height: 22px;
 }
 
 .placeholder {
@@ -193,7 +256,7 @@
   justify-content: center;
 
   width: 100%;
-  aspect-ratio: 3 / 2;
+  height: 100%;
   background-color: rgba(244, 244, 244, 0.06);
 
   font-family: "ibm_plex_mono";
@@ -206,5 +269,6 @@
 }
 
 .gallery_item.full .placeholder {
+  height: auto;
   aspect-ratio: 16 / 9;
 }

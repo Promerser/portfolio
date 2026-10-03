@@ -327,6 +327,7 @@ a {
   display: flex;
   justify-content: flex-end;
   align-items: flex-start;
+  gap: 4px;
 
   position: sticky;
   top: 60px;

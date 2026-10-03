@@ -2,11 +2,31 @@ const params = new URLSearchParams(window.location.search);
 const slug = params.get("project");
 const rawProject = PROJECTS[slug] || PROJECTS.b2bright;
 
+const rawImages =
+  rawProject.images && rawProject.images.length
+    ? rawProject.images
+    : [
+        { src: "" },
+        { src: "" },
+        { src: "", full: true },
+      ];
+
+const galleryImages = rawImages.map((item) => ({ ...item }));
+if (!galleryImages.some((item) => item.full)) {
+  if (galleryImages.length === 1) {
+    galleryImages[0].full = true;
+  } else if (galleryImages.length === 3 || galleryImages.length === 5) {
+    galleryImages[2].full = true;
+  }
+}
+
 const project = {
   category: rawProject.category || "",
   year: rawProject.year || "",
   title: rawProject.title,
-  description: rawProject.description || [],
+  description: Array.isArray(rawProject.description)
+    ? rawProject.description
+    : [rawProject.description],
   task: rawProject.task || "",
   solution: rawProject.solution || "",
   result: rawProject.result || "",
@@ -15,14 +35,7 @@ const project = {
       ? rawProject.figmaLink
       : "",
   heroImage: rawProject.heroImage || {},
-  images:
-    rawProject.images && rawProject.images.length
-      ? rawProject.images
-      : [
-          { src: "" },
-          { src: "" },
-          { src: "", full: true },
-        ],
+  images: galleryImages,
 };
 
 document.title = project.title;
@@ -37,11 +50,13 @@ bcYear.textContent = project.year;
 document.getElementById("project_title").textContent = project.title;
 
 const descEl = document.getElementById("project_desc");
-project.description.forEach((text) => {
-  const p = document.createElement("p");
-  p.textContent = text;
-  descEl.appendChild(p);
-});
+project.description
+  .filter((text) => text && text.trim())
+  .forEach((text) => {
+    const p = document.createElement("p");
+    p.textContent = text;
+    descEl.appendChild(p);
+  });
 
 if (project.figmaLink) {
   const figmaLink = document.createElement("a");
@@ -141,9 +156,55 @@ document
   .appendChild(createImage(project.heroImage, 0));
 
 const gallery = document.getElementById("project_gallery");
+const scrollSyncs = [];
+
+function createScrollIndicator() {
+  const indicator = document.createElement("div");
+  indicator.className = "scroll_indicator";
+  const label = document.createElement("span");
+  label.textContent = "SCROLL";
+  const icon = document.createElement("img");
+  icon.src = "content/icons/scroll_mouse.svg";
+  icon.alt = "";
+  indicator.appendChild(label);
+  indicator.appendChild(icon);
+  return indicator;
+}
+
 project.images.forEach((item, index) => {
   const el = document.createElement("div");
   el.className = item.full ? "gallery_item full" : "gallery_item";
-  el.appendChild(createImage(item, index));
+  const scroller = document.createElement("div");
+  scroller.className = "gallery_item_scroll";
+  const content = createImage(item, index);
+  scroller.appendChild(content);
+  el.appendChild(scroller);
   gallery.appendChild(el);
+
+  const syncIndicator = () => {
+    const scrollable = scroller.scrollHeight > scroller.clientHeight;
+    if (scrollable && !el.querySelector(".scroll_indicator")) {
+      el.appendChild(createScrollIndicator());
+    } else if (!scrollable) {
+      const indicator = el.querySelector(".scroll_indicator");
+      if (indicator) {
+        indicator.remove();
+      }
+    }
+  };
+
+  if (content.tagName === "IMG") {
+    if (content.complete) {
+      syncIndicator();
+    } else {
+      content.addEventListener("load", syncIndicator);
+    }
+  } else {
+    syncIndicator();
+  }
+  scrollSyncs.push(syncIndicator);
+});
+
+window.addEventListener("resize", () => {
+  scrollSyncs.forEach((sync) => sync());
 });
