@@ -154,6 +154,48 @@ header button:hover {
   cursor: pointer;
 }
 
+.theme_button .ray {
+  transform-box: view-box;
+  transform-origin: 10px 10px;
+  transition:
+    transform 0.4s ease,
+    opacity 0.25s ease,
+    stroke 0.3s ease;
+}
+
+.theme_button .sun_disk {
+  transition: fill 0.3s ease;
+}
+
+.theme_button.moon .ray {
+  transform: scale(0);
+  opacity: 0;
+  stroke: #000;
+}
+
+.theme_button.moon .sun_disk {
+  fill: #000;
+}
+
+.theme_button .moon_group {
+  transform-box: view-box;
+  transform-origin: 10px 10px;
+  transition: transform 0.5s ease;
+}
+
+.theme_button.moon .moon_group {
+  transform: scale(2.1);
+}
+
+.theme_button .mask_cut {
+  transform: translate(7.8px, -7.133px);
+  transition: transform 0.5s ease;
+}
+
+.theme_button.moon .mask_cut {
+  transform: translate(0, 0);
+}
+
 .first {
   display: flex;
   flex-direction: column;

@@ -11,6 +11,11 @@ menu.querySelectorAll(".menu_left a").forEach((link) => {
   });
 });
 
+const themeButton = document.querySelector(".theme_button");
+themeButton.addEventListener("click", () => {
+  themeButton.classList.toggle("moon");
+});
+
 const scrollButton = document.querySelector(".scroll_button");
 scrollButton.addEventListener("click", () => {
   window.scrollBy({ top: window.innerHeight, behavior: "smooth" });
