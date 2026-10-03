@@ -20,7 +20,7 @@ const counter = document.querySelector(".second_other .counter span");
 const cards = document.querySelectorAll(".second_other article");
 
 function updateCounter() {
-  const mid = window.innerHeight / 2;
+  const mid = window.innerHeight / 5;
   let index = 0;
 
   cards.forEach((card, i) => {

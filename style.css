@@ -284,6 +284,10 @@ a {
   border-radius: 16px;
 }
 
+.second_other .second_main_content > a:first-child img {
+  width: 100%;
+}
+
 .second_left .second_main,
 .second_left .second_main_content {
   min-height: 0;
@@ -376,6 +380,15 @@ a {
   font-size: 12px;
   line-height: 100%;
   letter-spacing: 0.78px;
+  text-shadow:
+    -1px -1px 0 #000,
+    0 -1px 0 #000,
+    1px -1px 0 #000,
+    -1px 0 0 #000,
+    1px 0 0 #000,
+    -1px 1px 0 #000,
+    0 1px 0 #000,
+    1px 1px 0 #000;
 }
 img {
   max-width: 100%;
