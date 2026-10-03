@@ -6,7 +6,7 @@
 }
 
 h1 {
-  color: #F4F4F4;
+  color: var(--text);
   font-family: 'Unbounded', sans-serif;
   font-weight: 600;
   font-size: 64px;
@@ -26,7 +26,7 @@ h1 {
 }
 
 .filters button {
-  color: #F4F4F4;
+  color: var(--text);
   opacity: 0.65;
   font-family: 'IBM Plex Mono', monospace;
   font-weight: 500;
@@ -71,7 +71,7 @@ h1 {
 }
 
 .project_info h2 {
-  color: #F4F4F4;
+  color: var(--text);
   font-family: 'Unbounded', sans-serif;
   font-weight: 600;
   font-size: 17px;
@@ -81,7 +81,7 @@ h1 {
 }
 
 .project_info p {
-  color: #F4F4F4;
+  color: var(--text);
   opacity: 0.65;
   font-family: 'IBM Plex Mono', monospace;
   font-weight: 400;
@@ -92,7 +92,7 @@ h1 {
 }
 
 .project_card a {
-  color: #F4F4F4;
+  color: var(--text);
   font-family: 'IBM Plex Mono', monospace;
   font-weight: 500;
   font-size: 16px;

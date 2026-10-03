@@ -66,8 +66,8 @@ p.about_city {
   align-items: center;
 
   padding: 100px 0;
-  border-top: 1px solid rgba(244, 244, 244, 0.32);
-  border-bottom: 1px solid rgba(244, 244, 244, 0.32);
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
 }
 
 .skills h1 {
@@ -94,7 +94,7 @@ p.about_city {
 
 .skills_line {
   height: 1px;
-  background-color: #f4f4f4;
+  background-color: var(--text);
   opacity: 0.32;
 }
 
@@ -143,9 +143,9 @@ p.about_city {
   width: 10px;
   height: 23px;
   border-radius: 3px;
-  background-color: #545454;
+  background-color: var(--progress-idle);
 }
 
 .tool_progress .active {
-  background-color: #ffffff;
+  background-color: var(--text-strong);
 }

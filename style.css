@@ -1,3 +1,15 @@
+:root {
+  --bg: #0f0f0f;
+  --text: #f4f4f4;
+  --text-strong: #ffffff;
+  --line: rgba(244, 244, 244, 0.32);
+  --surface: rgba(244, 244, 244, 0.06);
+  --bg-overlay: #060606;
+  --bg-indicator: #030303;
+  --progress-idle: #545454;
+  --outline: #000;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -82,11 +94,11 @@
 
 html,
 body {
-  background-color: #0f0f0f;
+  background-color: var(--bg);
 }
 
 body {
-  color: #f4f4f4;
+  color: var(--text);
 }
 
 header {
@@ -223,7 +235,7 @@ a {
   border: 1px solid;
   text-decoration: none;
   border-radius: 999px;
-  border-color: #f4f4f4;
+  border-color: var(--text);
   text-align: center;
 }
 
@@ -239,7 +251,7 @@ a {
 
   border: none;
   background-color: inherit;
-  color: #ffffff;
+  color: var(--text-strong);
 }
 
 .scroll_button span:last-child {
@@ -256,7 +268,7 @@ a {
   left: 0;
   width: 1px;
   height: 66px;
-  background-color: #f4f4f4;
+  background-color: var(--text);
   opacity: 0.32;
 }
 
@@ -267,7 +279,7 @@ a {
   left: 0;
   width: 1px;
   height: 5px;
-  background-color: #ffffff;
+  background-color: var(--text-strong);
   animation: scrollLine 1.33s ease-in-out infinite;
 }
 
@@ -423,14 +435,14 @@ a {
   line-height: 100%;
   letter-spacing: 0.78px;
   text-shadow:
-    -1px -1px 0 #000,
-    0 -1px 0 #000,
-    1px -1px 0 #000,
-    -1px 0 0 #000,
-    1px 0 0 #000,
-    -1px 1px 0 #000,
-    0 1px 0 #000,
-    1px 1px 0 #000;
+    -1px -1px 0 var(--outline),
+    0 -1px 0 var(--outline),
+    1px -1px 0 var(--outline),
+    -1px 0 0 var(--outline),
+    1px 0 0 var(--outline),
+    -1px 1px 0 var(--outline),
+    0 1px 0 var(--outline),
+    1px 1px 0 var(--outline);
 }
 img {
   max-width: 100%;
@@ -458,7 +470,7 @@ img {
 
 .third_line {
   width: 1px;
-  background-color: #f4f4f4;
+  background-color: var(--text);
   opacity: 0.32;
 }
 
@@ -518,12 +530,12 @@ img {
   font-size: 14px;
   line-height: 120%;
   letter-spacing: 1%;
-  color: #f4f4f4;
+  color: var(--text);
   opacity: 0.82;
 }
 
 footer {
-  color: #f4f4f4;
+  color: var(--text);
 
   display: flex;
   flex-direction: row;
@@ -565,7 +577,7 @@ footer a {
 
   padding: 100px 64px 40px;
 
-  background-color: #060606;
+  background-color: var(--bg-overlay);
 
   opacity: 0;
   visibility: hidden;
