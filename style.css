@@ -101,6 +101,10 @@ header {
   width: 100%;
   padding: 24px 64px;
 
+  background-color: rgba(0, 0, 0, 0.5);
+  -webkit-backdrop-filter: blur(12px);
+  backdrop-filter: blur(12px);
+
   font-family: "ibm_plex_mono";
   font-weight: 700;
   font-size: 14px;
