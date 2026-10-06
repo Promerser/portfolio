@@ -33,28 +33,20 @@ const counter = document.querySelector(".second_other .counter span");
 const cards = document.querySelectorAll(".second_other article");
 
 if (counter) {
-  let ticking = false;
-
   function updateCounter() {
-    if (ticking) return;
-    ticking = true;
+    const mid = window.innerHeight / 5;
+    let index = 0;
 
-    window.requestAnimationFrame(() => {
-      let bestIndex = 0;
-      let bestRatio = 0;
-
-      cards.forEach((card, i) => {
-        if (card.intersectionRatio > bestRatio) {
-          bestRatio = card.intersectionRatio;
-          bestIndex = i;
-        }
-      });
-
-      counter.textContent = String(bestIndex + 1).padStart(2, "0");
-      ticking = false;
+    cards.forEach((card, i) => {
+      if (card.getBoundingClientRect().top <= mid) {
+        index = i;
+      }
     });
+
+    counter.textContent = String(index + 1).padStart(2, "0");
   }
 
-  window.addEventListener("scroll", updateCounter, { passive: true });
+  window.addEventListener("scroll", updateCounter);
+  window.addEventListener("resize", updateCounter);
   updateCounter();
 }
