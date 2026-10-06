@@ -6,12 +6,97 @@
     <title>РАБОТЫ</title>
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="works.css" />
+    <script>
+      if (localStorage.getItem("theme") === "light") {
+        document.documentElement.classList.add("light");
+      }
+    </script>
   </head>
   <body>
     <header>
       <p>ДИНАРА СИРАЗТДИНОВА</p>
-      <button>
-        <img src="content/icons/Theme_changer.svg" alt=" theme changer" />
+      <button class="theme_button" aria-label="Theme changer">
+        <svg
+          width="20"
+          height="20"
+          viewBox="0 0 20 20"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          aria-hidden="true"
+        >
+          <mask
+            id="moon_mask"
+            maskUnits="userSpaceOnUse"
+            x="0"
+            y="0"
+            width="20"
+            height="20"
+          >
+            <rect width="20" height="20" fill="white" />
+            <g class="mask_cut">
+              <circle cx="12.2" cy="8.8" r="3.2" fill="black" />
+            </g>
+          </mask>
+          <g class="moon_group" mask="url(#moon_mask)">
+            <circle class="sun_disk" cx="10" cy="10" r="4.16675" fill="white" />
+          </g>
+          <path
+            class="ray"
+            d="M10 1.25V2.91667"
+            stroke="white"
+            stroke-width="1.33333"
+            stroke-linecap="round"
+          />
+          <path
+            class="ray"
+            d="M10 17.0834V18.75"
+            stroke="white"
+            stroke-width="1.33333"
+            stroke-linecap="round"
+          />
+          <path
+            class="ray"
+            d="M1.25 10H2.91667"
+            stroke="white"
+            stroke-width="1.33333"
+            stroke-linecap="round"
+          />
+          <path
+            class="ray"
+            d="M17.0835 10H18.7502"
+            stroke="white"
+            stroke-width="1.33333"
+            stroke-linecap="round"
+          />
+          <path
+            class="ray"
+            d="M3.5 3.5L4.75 4.75"
+            stroke="white"
+            stroke-width="1.33333"
+            stroke-linecap="round"
+          />
+          <path
+            class="ray"
+            d="M15.25 15.25L16.5 16.5"
+            stroke="white"
+            stroke-width="1.33333"
+            stroke-linecap="round"
+          />
+          <path
+            class="ray"
+            d="M3.5 16.5L4.75 15.25"
+            stroke="white"
+            stroke-width="1.33333"
+            stroke-linecap="round"
+          />
+          <path
+            class="ray"
+            d="M15.25 4.75L16.5 3.5"
+            stroke="white"
+            stroke-width="1.33333"
+            stroke-linecap="round"
+          />
+        </svg>
       </button>
       <button id="menu_button">
         <img src="content/icons/Button - Menu.svg" alt="" />
@@ -63,7 +148,7 @@
         <div class="projects">
           <article class="project_card">
             <a href="project.html?project=b2bright"
-              ><img src="content/images/Overlay (0).png" alt="B2BLIGHT"
+              ><img src="content/images/overlay-0.png" alt="B2BLIGHT"
             /></a>
             <div class="project_info">
               <h2>B2BLIGHT</h2>
@@ -74,7 +159,7 @@
 
           <article class="project_card">
             <a href="project.html?project=unipark"
-              ><img src="content/images/Overlay.png" alt="УНИПАРК"
+              ><img src="content/images/overlay-0.png" alt="УНИПАРК"
             /></a>
             <div class="project_info">
               <h2>УНИПАРК</h2>
@@ -85,7 +170,7 @@
 
           <article class="project_card">
             <a href="project.html?project=airport-sochi"
-              ><img src="content/images/Overlay (1).png" alt="АЭРОПОРТ СОЧИ"
+              ><img src="content/images/overlay-1.png" alt="АЭРОПОРТ СОЧИ"
             /></a>
             <div class="project_info">
               <h2>АЭРОПОРТ СОЧИ</h2>
@@ -96,7 +181,7 @@
 
           <article class="project_card">
             <a href="project.html?project=skulptor"
-              ><img src="content/images/Overlay (2).png" alt="СКУЛЬПТОР"
+              ><img src="content/images/overlay-2.png" alt="СКУЛЬПТОР"
             /></a>
             <div class="project_info">
               <h2>СКУЛЬПТОР</h2>
@@ -107,7 +192,7 @@
 
           <article class="project_card">
             <a href="project.html?project=toskl-lk"
-              ><img src="content/images/Overlay (3).png" alt="ТОСКЛ ЛК"
+              ><img src="content/images/overlay-3.png" alt="ТОСКЛ ЛК"
             /></a>
             <div class="project_info">
               <h2>ТОСКЛ ЛК</h2>
@@ -119,7 +204,7 @@
           <article class="project_card">
             <a href="project.html?project=airport-krasnodar"
               ><img
-                src="content/images/Overlay (4).png"
+                src="content/images/overlay-4.png"
                 alt="АЭРОПОРТ КРАСНОДАР"
               /></a>
             <div class="project_info">
@@ -132,7 +217,7 @@
           <article class="project_card">
             <a href="project.html?project=radio-school"
               ><img
-                src="content/images/Overlay (5).png"
+                src="content/images/overlay-5.png"
                 alt="ШКОЛА НАСТОЯЩЕЙ РАДИОТЕХНИКИ"
               /></a>
             <div class="project_info">
@@ -144,7 +229,7 @@
 
           <article class="project_card">
             <a href="project.html?project=mars-stones"
-              ><img src="content/images/Overlay (6).png" alt="MARS STONES"
+              ><img src="content/images/overlay-6.png" alt="MARS STONES"
             /></a>
             <div class="project_info">
               <h2>MARS STONES</h2>
@@ -155,7 +240,7 @@
 
           <article class="project_card">
             <a href="project.html?project=delfanto"
-              ><img src="content/images/Overlay (7).png" alt="ДЕЛЬФАНТО"
+              ><img src="content/images/overlay-7.png" alt="ДЕЛЬФАНТО"
             /></a>
             <div class="project_info">
               <h2>ДЕЛЬФАНТО</h2>
@@ -166,7 +251,7 @@
 
           <article class="project_card">
             <a href="project.html?project=mehkov"
-              ><img src="content/images/Overlay (8).png" alt="МЕХКОВ"
+              ><img src="content/images/overlay-8.png" alt="МЕХКОВ"
             /></a>
             <div class="project_info">
               <h2>МЕХКОВ</h2>
@@ -178,7 +263,7 @@
           <article class="project_card">
             <a href="project.html?project=direkting-stickers"
               ><img
-                src="content/images/Overlay (9).png"
+                src="content/images/overlay-9.png"
                 alt="СТИКЕРЫ ДЛЯ DIREKTINK"
               /></a>
             <div class="project_info">
@@ -191,7 +276,7 @@
           <article class="project_card">
             <a href="project.html?project=nin-publishing"
               ><img
-                src="content/images/Overlay (10).png"
+                src="content/images/overlay-10.png"
                 alt="НИН/ИЗДАТЕЛЬСТВО"
               /></a>
             <div class="project_info">
@@ -203,7 +288,7 @@
 
           <article class="project_card">
             <a href="project.html?project=rusapr"
-              ><img src="content/images/Overlay (11).png" alt="РУСАПР"
+              ><img src="content/images/overlay-11.png" alt="РУСАПР"
             /></a>
             <div class="project_info">
               <h2>РУСАПР</h2>
@@ -214,7 +299,7 @@
 
           <article class="project_card">
             <a href="project.html?project=sitepatrol"
-              ><img src="content/images/Overlay (12).png" alt="SITEPATROL"
+              ><img src="content/images/overlay-12.png" alt="SITEPATROL"
             /></a>
             <div class="project_info">
               <h2>SITEPATROL</h2>
@@ -225,7 +310,7 @@
 
           <article class="project_card">
             <a href="project.html?project=sk-sfera"
-              ><img src="content/images/Overlay (13).png" alt="СК СФЕРА"
+              ><img src="content/images/overlay-13.png" alt="СК СФЕРА"
             /></a>
             <div class="project_info">
               <h2>СК СФЕРА</h2>

@@ -143,7 +143,7 @@ p.about_city {
   width: 10px;
   height: 23px;
   border-radius: 3px;
-  background-color: var(--progress-idle);
+  background-color: #545454;
 }
 
 .tool_progress .active {

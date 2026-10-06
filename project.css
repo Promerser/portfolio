@@ -1,7 +1,7 @@
 .project_page {
   display: flex;
   flex-direction: column;
-  padding: 165px 64px;
+  padding: 165px 64px 100px 64px;
 }
 
 .project_breadcrumb {
@@ -243,6 +243,7 @@
   letter-spacing: 3%;
   vertical-align: middle;
   text-transform: uppercase;
+  color: #f4f4f4;
 }
 
 .scroll_indicator img {

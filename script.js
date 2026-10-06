@@ -12,31 +12,41 @@ menu.querySelectorAll(".menu_left a").forEach((link) => {
 });
 
 const themeButton = document.querySelector(".theme_button");
+themeButton.classList.toggle(
+  "moon",
+  document.documentElement.classList.contains("light")
+);
 themeButton.addEventListener("click", () => {
-  themeButton.classList.toggle("moon");
+  const light = document.documentElement.classList.toggle("light");
+  themeButton.classList.toggle("moon", light);
+  localStorage.setItem("theme", light ? "light" : "dark");
 });
 
 const scrollButton = document.querySelector(".scroll_button");
-scrollButton.addEventListener("click", () => {
-  window.scrollBy({ top: window.innerHeight, behavior: "smooth" });
-});
+if (scrollButton) {
+  scrollButton.addEventListener("click", () => {
+    window.scrollBy({ top: window.innerHeight, behavior: "smooth" });
+  });
+}
 
 const counter = document.querySelector(".second_other .counter span");
 const cards = document.querySelectorAll(".second_other article");
 
-function updateCounter() {
-  const mid = window.innerHeight / 5;
-  let index = 0;
+if (counter) {
+  function updateCounter() {
+    const mid = window.innerHeight / 5;
+    let index = 0;
 
-  cards.forEach((card, i) => {
-    if (card.getBoundingClientRect().top <= mid) {
-      index = i;
-    }
-  });
+    cards.forEach((card, i) => {
+      if (card.getBoundingClientRect().top <= mid) {
+        index = i;
+      }
+    });
 
-  counter.textContent = String(index + 1).padStart(2, "0");
+    counter.textContent = String(index + 1).padStart(2, "0");
+  }
+
+  window.addEventListener("scroll", updateCounter);
+  window.addEventListener("resize", updateCounter);
+  updateCounter();
 }
-
-window.addEventListener("scroll", updateCounter);
-window.addEventListener("resize", updateCounter);
-updateCounter();
