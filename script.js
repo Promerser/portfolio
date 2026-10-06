@@ -34,25 +34,19 @@ const cards = document.querySelectorAll(".second_other article");
 
 if (counter) {
   let bestIndex = 0;
-  let ticking = false;
 
-  function updateCounter() {
-    if (ticking) return;
-    ticking = true;
+  const observer = new IntersectionObserver((entries) => {
+    let bestRatio = 0;
 
-    window.requestAnimationFrame(() => {
-      let bestRatio = 0;
-      cards.forEach((card, i) => {
-        if (card.intersectionRatio > bestRatio) {
-          bestRatio = card.intersectionRatio;
-          bestIndex = i;
-        }
-      });
-      counter.textContent = String(bestIndex + 1).padStart(2, "0");
-      ticking = false;
+    entries.forEach((entry) => {
+      if (entry.intersectionRatio > bestRatio) {
+        bestRatio = entry.intersectionRatio;
+        bestIndex = Array.from(cards).indexOf(entry.target);
+      }
     });
-  }
 
-  const observer = new IntersectionObserver(updateCounter, { threshold: [0.25, 0.5, 0.75, 1] });
+    counter.textContent = String(bestIndex + 1).padStart(2, "0");
+  }, { threshold: 0 });
+
   cards.forEach((card) => observer.observe(card));
 }
