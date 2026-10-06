@@ -33,20 +33,19 @@ const counter = document.querySelector(".second_other .counter span");
 const cards = document.querySelectorAll(".second_other article");
 
 if (counter) {
-  function updateCounter() {
+  const observer = new IntersectionObserver((entries) => {
     const mid = window.innerHeight / 5;
     let index = 0;
 
     cards.forEach((card, i) => {
-      if (card.getBoundingClientRect().top <= mid) {
+      const rect = card.getBoundingClientRect();
+      if (rect.top <= mid) {
         index = i;
       }
     });
 
     counter.textContent = String(index + 1).padStart(2, "0");
-  }
+  }, { threshold: 0.2 });
 
-  window.addEventListener("scroll", updateCounter);
-  window.addEventListener("resize", updateCounter);
-  updateCounter();
+  cards.forEach((card) => observer.observe(card));
 }
