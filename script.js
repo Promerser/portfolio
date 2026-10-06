@@ -34,18 +34,19 @@ const cards = document.querySelectorAll(".second_other article");
 
 if (counter) {
   const observer = new IntersectionObserver((entries) => {
-    const mid = window.innerHeight / 5;
-    let index = 0;
+    let bestIndex = 0;
+    let bestRatio = 0;
 
     cards.forEach((card, i) => {
-      const rect = card.getBoundingClientRect();
-      if (rect.top <= mid) {
-        index = i;
+      const ratio = card.intersectionRatio;
+      if (ratio > bestRatio) {
+        bestRatio = ratio;
+        bestIndex = i;
       }
     });
 
-    counter.textContent = String(index + 1).padStart(2, "0");
-  }, { threshold: 0.2 });
+    counter.textContent = String(bestIndex + 1).padStart(2, "0");
+  }, { threshold: [0.25, 0.5, 0.75, 1] });
 
   cards.forEach((card) => observer.observe(card));
 }
