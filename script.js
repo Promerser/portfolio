@@ -35,25 +35,26 @@ const cards = document.querySelectorAll(".second_other article");
 if (counter) {
   let ticking = false;
 
-  const observer = new IntersectionObserver(() => {
-    if (!ticking) {
-      ticking = true;
-      window.requestAnimationFrame(() => {
-        let bestIndex = 0;
-        let bestRatio = 0;
+  function updateCounter() {
+    if (ticking) return;
+    ticking = true;
 
-        cards.forEach((card, i) => {
-          if (card.intersectionRatio > bestRatio) {
-            bestRatio = card.intersectionRatio;
-            bestIndex = i;
-          }
-        });
+    window.requestAnimationFrame(() => {
+      let bestIndex = 0;
+      let bestRatio = 0;
 
-        counter.textContent = String(bestIndex + 1).padStart(2, "0");
-        ticking = false;
+      cards.forEach((card, i) => {
+        if (card.intersectionRatio > bestRatio) {
+          bestRatio = card.intersectionRatio;
+          bestIndex = i;
+        }
       });
-    }
-  }, { threshold: 0 });
 
-  cards.forEach((card) => observer.observe(card));
+      counter.textContent = String(bestIndex + 1).padStart(2, "0");
+      ticking = false;
+    });
+  }
+
+  window.addEventListener("scroll", updateCounter, { passive: true });
+  updateCounter();
 }
