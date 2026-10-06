@@ -33,18 +33,26 @@ const counter = document.querySelector(".second_other .counter span");
 const cards = document.querySelectorAll(".second_other article");
 
 if (counter) {
+  let ticking = false;
+
   const observer = new IntersectionObserver(() => {
-    let bestIndex = 0;
-    let bestRatio = 0;
+    if (!ticking) {
+      ticking = true;
+      window.requestAnimationFrame(() => {
+        let bestIndex = 0;
+        let bestRatio = 0;
 
-    cards.forEach((card, i) => {
-      if (card.intersectionRatio > bestRatio) {
-        bestRatio = card.intersectionRatio;
-        bestIndex = i;
-      }
-    });
+        cards.forEach((card, i) => {
+          if (card.intersectionRatio > bestRatio) {
+            bestRatio = card.intersectionRatio;
+            bestIndex = i;
+          }
+        });
 
-    counter.textContent = String(bestIndex + 1).padStart(2, "0");
+        counter.textContent = String(bestIndex + 1).padStart(2, "0");
+        ticking = false;
+      });
+    }
   }, { threshold: 0 });
 
   cards.forEach((card) => observer.observe(card));
