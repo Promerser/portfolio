@@ -33,15 +33,14 @@ const counter = document.querySelector(".second_other .counter span");
 const cards = document.querySelectorAll(".second_other article");
 
 if (counter) {
-  let bestIndex = 0;
-
-  const observer = new IntersectionObserver((entries) => {
+  const observer = new IntersectionObserver(() => {
+    let bestIndex = 0;
     let bestRatio = 0;
 
-    entries.forEach((entry) => {
-      if (entry.intersectionRatio > bestRatio) {
-        bestRatio = entry.intersectionRatio;
-        bestIndex = Array.from(cards).indexOf(entry.target);
+    cards.forEach((card, i) => {
+      if (card.intersectionRatio > bestRatio) {
+        bestRatio = card.intersectionRatio;
+        bestIndex = i;
       }
     });
 
