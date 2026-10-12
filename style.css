@@ -100,6 +100,14 @@
   line-height: 130%;
 }
 
+.second_header {
+  display: contents;
+}
+
+.second_link {
+  display: none;
+}
+
 html,
 body {
   background-color: var(--bg);
@@ -667,4 +675,172 @@ footer a {
   display: flex;
   flex-direction: row;
   gap: 19px;
+}
+
+/* ===== Tablet (768–1024) ===== */
+@media (max-width: 1024px) {
+  header {
+    padding: 20px 16px;
+    font-weight: 600;
+    letter-spacing: 0.42px;
+  }
+
+  .first {
+    position: relative;
+    min-height: 0;
+    padding: 190px 16px 376px;
+    justify-content: flex-start;
+  }
+
+  .first_text h1 {
+    /* 48px из макета не вмещает Unbounded в 3 строки — берём вписывающийся размер */
+    font-size: clamp(38px, 5vw, 46px);
+  }
+
+  .projects_button {
+    padding: 12px 20px;
+  }
+
+  .scroll_button {
+    right: auto;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .second {
+    position: relative;
+    min-height: 0;
+    padding: 0 16px;
+  }
+
+  .second_header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 2;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .second h1 {
+    font-size: 36px;
+    letter-spacing: 0.35px;
+  }
+
+  .second_link {
+    display: inline-block;
+    padding: 12px 20px;
+    border: 1px solid var(--text);
+    border-radius: 999px;
+    text-align: center;
+  }
+
+  .second_content {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 30px;
+
+    padding-top: 79px;
+    overflow-x: auto;
+    overflow-y: hidden;
+    scrollbar-width: none;
+  }
+
+  .second_content::-webkit-scrollbar {
+    display: none;
+  }
+
+  /* все карточки в одну горизонтальную строку: 3 карточки в ширину экрана */
+  .second article {
+    flex: 0 0 calc((100% - 60px) / 3);
+    min-width: 0;
+  }
+
+  .second_left,
+  .second_other {
+    display: contents;
+  }
+
+  .second_other .counter {
+    display: none;
+  }
+
+  .second_main_content {
+    gap: 13px;
+  }
+
+  .second_left .second_main_content > a:first-child {
+    display: block;
+  }
+
+  .second .second_main_content > a:first-child img {
+    flex: none;
+    width: 100%;
+    aspect-ratio: 3 / 4;
+    object-fit: cover;
+  }
+
+  .second_main_text > p {
+    display: none;
+  }
+
+  .second_main_text_sides {
+    justify-content: space-between;
+    align-items: center;
+    gap: 24px;
+  }
+
+  .second_main_text_sides h2 {
+    font-size: 17px;
+  }
+
+  .second_main_text_sides p {
+    text-align: right;
+  }
+
+  .third {
+    padding: 100px 16px 90px;
+  }
+
+  .third h1 {
+    font-size: 36px;
+    letter-spacing: 0.35px;
+  }
+
+  .third_content {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 24px;
+  }
+
+  .third_line {
+    width: 100%;
+    height: 1px;
+  }
+
+  .third_card {
+    width: 100%;
+  }
+
+  footer {
+    padding: 32px 16px;
+  }
+
+  .menu {
+    padding: 100px 16px 40px;
+  }
+
+  .menu_top {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 48px;
+  }
+
+  .menu_left a {
+    font-size: 64px;
+  }
 }
