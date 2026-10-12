@@ -685,11 +685,10 @@ footer a {
     letter-spacing: 0.42px;
   }
 
+  /* как на ПК: секция на весь экран, контент по центру (scroll button остаётся снизу) */
   .first {
     position: relative;
-    min-height: 0;
-    padding: 190px 16px 376px;
-    justify-content: flex-start;
+    padding: 50px 16px;
   }
 
   .first_text h1 {
@@ -716,8 +715,8 @@ footer a {
   .second_header {
     position: absolute;
     top: 0;
-    left: 0;
-    right: 0;
+    left: 16px;
+    right: 16px;
     z-index: 2;
 
     display: flex;
@@ -754,9 +753,9 @@ footer a {
     display: none;
   }
 
-  /* все карточки в одну горизонтальную строку: 3 карточки в ширину экрана */
+  /* все карточки в одну горизонтальную строку; карточка 428px, картинка 428×294 (по указанию) */
   .second article {
-    flex: 0 0 calc((100% - 60px) / 3);
+    flex: 0 0 428px;
     min-width: 0;
   }
 
@@ -780,7 +779,7 @@ footer a {
   .second .second_main_content > a:first-child img {
     flex: none;
     width: 100%;
-    aspect-ratio: 3 / 4;
+    aspect-ratio: 428 / 294;
     object-fit: cover;
   }
 
@@ -789,6 +788,7 @@ footer a {
   }
 
   .second_main_text_sides {
+    flex-direction: row;
     justify-content: space-between;
     align-items: center;
     gap: 24px;
@@ -842,5 +842,146 @@ footer a {
 
   .menu_left a {
     font-size: 64px;
+  }
+}
+
+/* ===== Mobile (≤767) ===== */
+@media (max-width: 767px) {
+  header {
+    font-size: 12px;
+  }
+
+  .first {
+    /* stretch: чтобы текст переносился по ширине экрана,
+       а блок не растягивался до max-content (465px+) и не вылезал за экран */
+    align-items: stretch;
+    padding: 50px 16px;
+    gap: 24px;
+  }
+
+  .first_text {
+    gap: 12px;
+  }
+
+  .first_text p {
+    font-size: 18px;
+  }
+
+  .first_text h1 {
+    /* 24px из макета (Uncial Antiqua) — берём размер, при котором Unbounded вписывается в 3 строки */
+    font-size: 16px;
+  }
+
+  .first_buttons {
+    gap: 12px;
+    flex-wrap: wrap;
+  }
+
+  .second {
+    padding: 10px 16px 0;
+  }
+
+  .second_header {
+    top: 10px;
+  }
+
+  /* высота заголовка (~33px) + 24px до карточек по макету */
+  .second_content {
+    gap: 20px;
+    padding-top: 57px;
+  }
+
+  .second h1 {
+    font-size: 22px;
+    letter-spacing: 0.22px;
+  }
+
+  .second_link {
+    padding: 8px 12px;
+    font-size: 14px;
+  }
+
+  /* в макете карточки фиксированной ширины 280px */
+  .second article {
+    flex: 0 0 280px;
+  }
+
+  .second_main_content {
+    gap: 12px;
+  }
+
+  .second .second_main_content > a:first-child img {
+    aspect-ratio: 16 / 11;
+    border-radius: 14px;
+  }
+
+  .second_main_text {
+    gap: 4px;
+  }
+
+  /* в макете название и категория в столбик */
+  .second_main_text_sides {
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 4px;
+  }
+
+  .second_main_text_sides p {
+    text-align: left;
+  }
+
+  .third {
+    padding: 60px 16px 80px;
+  }
+
+  .third h1 {
+    font-size: 22px;
+    letter-spacing: 0.22px;
+  }
+
+  footer {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+    padding: 20px 16px;
+  }
+
+  .menu {
+    padding: 110px 16px 80px;
+  }
+
+  .menu_top {
+    gap: 32px;
+  }
+
+  .menu_left {
+    gap: 16px;
+  }
+
+  .menu_left a {
+    font-size: 32px;
+  }
+
+  .menu_right {
+    gap: 24px;
+  }
+
+  .menu_block {
+    gap: 16px;
+  }
+
+  .menu_label {
+    font-size: 16px;
+    opacity: 0.6;
+  }
+
+  .menu_block a,
+  .menu_block p:not(.menu_label) {
+    font-size: 20px;
+  }
+
+  .menu_socials {
+    gap: 24px;
   }
 }
