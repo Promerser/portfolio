@@ -12,11 +12,11 @@ const PROJECTS = {
       "Продумала визуальную систему бренда и разработала единые правила использования логотипа, цветовой палитры, типографики и фирменных элементов. Собрала всё в понятный гайдлайн для дальнейшего использования.",
     result:
       "Создано комплексное руководство по фирменному стилю, объединяющее правила работы с логотипом, цветовой палитрой, типографикой и визуальными элементами бренда.",
-    heroImage: { src: "content/images/Overlay (0).png", alt: "#" },
+    heroImage: { src: "content/images/b2blight/b2blight_main.png", alt: "#" },
     images: [
-      { src: "content/images/B2BLIGHT/B2BLIGHT_1.png", alt: "#" },
-      { src: "", alt: "#" },
-      { src: "content/images/B2BLIGHT/B2BLIGHT_3.png", alt: "#", full: true },
+      { src: "content/images/b2blight/b2blight_1.png", alt: "#" },
+      { src: "content/images/b2blight/b2blight_2.png", alt: "#" },
+      { src: "content/images/b2blight/b2blight_3.png", alt: "#" },
     ],
   },
   unipark: {
@@ -34,7 +34,7 @@ const PROJECTS = {
     result:
       "Получился современный корпоративный сайт, который помогает пользователю быстро разобраться в возможностях Унипарка, подобрать площадку и узнать условия для развития бизнеса.    ",
     figmaLink: "#",
-    heroImage: { src: "content/images/Overlay.png", alt: "#" },
+    heroImage: { src: "content/images/unipark/unipark_main.png", alt: "#" },
     images: [
       { src: "content/images/unipark/unipark_1.png", alt: "#" },
       { src: "content/images/unipark/unipark_2.png", alt: "#" },
@@ -57,11 +57,16 @@ const PROJECTS = {
     result:
       "В результате получился масштабный редизайн многостраничного сайта с единой визуальной системой и большим количеством проработанных интерфейсов. Были разработаны десятки страниц и шаблонов для различных разделов сайта, включая информационные и сервисные страницы, поиск, навигацию и адаптивные версии.",
     figmaLink: "#",
-    heroImage: { src: "content/images/Overlay (1).png", alt: "#" },
+    heroImage: {
+      src: "content/images/airport_sochi/airport_sochi_main.png",
+      alt: "#",
+    },
     images: [
-      { src: "", alt: "#" },
-      { src: "", alt: "#" },
-      { src: "", alt: "#", full: true },
+      { src: "content/images/airport_sochi/sochi_1.png", alt: "#" },
+      { src: "content/images/airport_sochi/sochi_2.png", alt: "#" },
+      { src: "content/images/airport_sochi/sochi_3.png", alt: "#" },
+      { src: "content/images/airport_sochi/sochi_4.png", alt: "#" },
+      { src: "content/images/airport_sochi/sochi_5.png", alt: "#" },
     ],
   },
   skulptor: {
@@ -76,14 +81,18 @@ const PROJECTS = {
     result:
       "В результате получилась целостная визуальная система, которую можно использовать в разных точках контакта бренда — от прайс-листов и печатных материалов до оформления пространства и социальных сетей.                  ",
     figmaLink: "#",
-    heroImage: { src: "content/images/Overlay (2).png", alt: "#" },
+    heroImage: { src: "content/images/skulptor/skulptor_main.png", alt: "#" },
     images: [
-      { src: "", alt: "#" },
-      { src: "", alt: "#" },
-      { src: "", alt: "#", full: true },
+      { src: "content/images/skulptor/Skulptor_1.png", alt: "#" },
+      { src: "content/images/skulptor/Skulptor_2.png", alt: "#" },
+      { src: "content/images/skulptor/Skulptor_3.png", alt: "#" },
+      { src: "content/images/skulptor/Skulptor_4.png", alt: "#" },
+      { src: "content/images/skulptor/Skulptor_5.png", alt: "#" },
+      { src: "content/images/skulptor/Skulptor_6.png", alt: "#" },
+      { src: "content/images/skulptor/Skulptor_7.png", alt: "#" },
     ],
   },
-  "toskl-lk": {
+  "tosk-lk": {
     title: "ТОСКЛ ЛК",
     category: "UX/UI ДИЗАЙН ЛИЧНОГО КАБИНЕТА",
     year: "2026",
@@ -98,11 +107,11 @@ const PROJECTS = {
     result:
       "Личный кабинет получил новые сценарии для юридических лиц, более понятную навигацию между типами пользователей и полноценный раздел обращений в веб-версии.",
     figmaLink: "#",
-    heroImage: { src: "content/images/Overlay (3).png", alt: "#" },
+    heroImage: { src: "content/images/tosk-lk/tosk-lk_main.png", alt: "#" },
     images: [
-      { src: "", alt: "#" },
-      { src: "", alt: "#" },
-      { src: "", alt: "#", full: true },
+      { src: "content/images/tosk-lk/tosk-lk_1.png", alt: "#" },
+      { src: "content/images/tosk-lk/tosk-lk_2.png", alt: "#" },
+      { src: "content/images/tosk-lk/tosk-lk_3.png", alt: "#" },
     ],
   },
   "airport-krasnodar": {
@@ -119,11 +128,16 @@ const PROJECTS = {
     result:
       "Готовый редизайн многостраничного сайта аэропорта Краснодар с уникальной цветовой идентичностью, но единой и удобной базовой структурой. Проработаны десятки ключевых и сервисных страниц, поиск, навигация и адаптивы под любые устройства.",
     figmaLink: "#",
-    heroImage: { src: "content/images/Overlay (4).png", alt: "#" },
+    heroImage: {
+      src: "content/images/airport_krasnodar/airport_krasnodar_main.png",
+      alt: "#",
+    },
     images: [
-      { src: "", alt: "#" },
-      { src: "", alt: "#" },
-      { src: "", alt: "#", full: true },
+      { src: "content/images/airport_krasnodar/krasnodar_1.png", alt: "#" },
+      { src: "content/images/airport_krasnodar/krasnodar_2.png", alt: "#" },
+      { src: "content/images/airport_krasnodar/krasnodar_3.png", alt: "#" },
+      { src: "content/images/airport_krasnodar/krasnodar_4.png", alt: "#" },
+      { src: "content/images/airport_krasnodar/krasnodar_5.png", alt: "#" },
     ],
   },
   "radio-school": {
@@ -141,11 +155,16 @@ const PROJECTS = {
     result:
       "В результате получился современный и цельный дизайн сайта с продуманной структурой и адаптацией под разные устройства.     Помимо лендинга были разработаны дополнительные интерфейсы: меню, форма обратной связи, текстовая страница и базовый UI-гайдлайн.",
     figmaLink: "#",
-    heroImage: { src: "content/images/Overlay (5).png", alt: "#" },
+    heroImage: {
+      src: "content/images/radio-school/radio-school_main.png",
+      alt: "#",
+    },
     images: [
-      { src: "", alt: "#" },
-      { src: "", alt: "#" },
-      { src: "", alt: "#", full: true },
+      { src: "content/images/radio-school/radio-school_1.png", alt: "#" },
+      { src: "content/images/radio-school/radio-school_2.png", alt: "#" },
+      { src: "content/images/radio-school/radio-school_3.png", alt: "#" },
+      { src: "content/images/radio-school/radio-school_4.png", alt: "#" },
+      { src: "content/images/radio-school/radio-school_5.png", alt: "#" },
     ],
   },
   "mars-stones": {
@@ -163,11 +182,16 @@ const PROJECTS = {
     result:
       "Удалось создать цельный и атмосферой проект, передающий глубину космической тематики. Использование акцентной сине-голубой гаммы и фактурных 3D-элементов помогло сформировать яркий образ бренда, а адаптированная верстка журнала продемонстрировала универсальность и гибкость созданной визуальной концепции в любых медиа.  ",
     figmaLink: "#",
-    heroImage: { src: "content/images/Overlay (6).png", alt: "#" },
+    heroImage: {
+      src: "content/images/mars-stones/mars-stones_main.png",
+      alt: "#",
+    },
     images: [
-      { src: "", alt: "#" },
-      { src: "", alt: "#" },
-      { src: "", alt: "#", full: true },
+      { src: "content/images/mars-stones/mars-stones_1.png", alt: "#" },
+      { src: "content/images/mars-stones/mars-stones_2.png", alt: "#" },
+      { src: "content/images/mars-stones/mars-stones_3.png", alt: "#" },
+      { src: "content/images/mars-stones/mars-stones_4.png", alt: "#" },
+      { src: "content/images/mars-stones/mars-stones_5.png", alt: "#" },
     ],
   },
   delfanto: {
@@ -188,11 +212,13 @@ const PROJECTS = {
     result:
       "Создана цельная e-commerce экосистема с единым визуальным стилем, понятным сценарием покупки и удобными шаблонами под расширение ассортимента. ",
     figmaLink: "#",
-    heroImage: { src: "content/images/Overlay (7).png", alt: "#" },
+    heroImage: { src: "content/images/delfanto/delfanto_main.png", alt: "#" },
     images: [
-      { src: "", alt: "#" },
-      { src: "", alt: "#" },
-      { src: "", alt: "#", full: true },
+      { src: "content/images/delfanto/delfanto_1.png", alt: "#" },
+      { src: "content/images/delfanto/delfanto_2.png", alt: "#" },
+      { src: "content/images/delfanto/delfanto_3.png", alt: "#" },
+      { src: "content/images/delfanto/delfanto_4.png", alt: "#" },
+      { src: "content/images/delfanto/delfanto_5.png", alt: "#" },
     ],
   },
   mehkov: {
@@ -207,11 +233,13 @@ const PROJECTS = {
     result:
       "Целостный и привлекательный визуальный контент, повышающий кликабельность (CTR) объявлений и доверие к бренду.",
     figmaLink: "#",
-    heroImage: { src: "content/images/Overlay (8).png", alt: "#" },
+    heroImage: { src: "content/images/mehkov/mehkov_main.png", alt: "#" },
     images: [
-      { src: "", alt: "#" },
-      { src: "", alt: "#" },
-      { src: "", alt: "#", full: true },
+      { src: "content/images/mehkov/mehkov_1.png", alt: "#" },
+      { src: "content/images/mehkov/mehkov_2.png", alt: "#" },
+      { src: "content/images/mehkov/mehkov_3.png", alt: "#" },
+      { src: "content/images/mehkov/mehkov_4.png", alt: "#" },
+      { src: "content/images/mehkov/mehkov_5.png", alt: "#" },
     ],
   },
   "direkting-stickers": {
@@ -226,11 +254,19 @@ const PROJECTS = {
     result:
       "Яркий и эмоциональный стикерпак, который усилит вовлеченность аудитории, подчеркнет позиционирование бренда и сделает корпоративную коммуникацию более живой и запоминающейся.",
     figmaLink: "#",
-    heroImage: { src: "content/images/Overlay (9).png", alt: "#" },
+    heroImage: {
+      src: "content/images/direkting-stickers/direkting-stickers_main.png",
+      alt: "#",
+    },
     images: [
-      { src: "", alt: "#" },
-      { src: "", alt: "#" },
-      { src: "", alt: "#", full: true },
+      {
+        src: "content/images/direkting-stickers/direkting-stickers_desktop.png",
+        srcTablet:
+          "content/images/direkting-stickers/direkting-stickers_tablet.png",
+        srcMobile:
+          "content/images/direkting-stickers/direkting-stickers_mobile.png",
+        alt: "#",
+      },
     ],
   },
   "nin-publishing": {
@@ -254,11 +290,16 @@ const PROJECTS = {
     result:
       "Сайт получил полноценный интернет-магазин с бесшовным пользовательским сценарием: от выбора книг и их покупки напрямую до управления личным кабинетом, отслеживания заказов и удобной записи детей на мероприятия.",
     figmaLink: "#",
-    heroImage: { src: "content/images/Overlay (10).png", alt: "#" },
+    heroImage: {
+      src: "content/images/nin-publishing/nin-publishing_main.png",
+      alt: "#",
+    },
     images: [
-      { src: "", alt: "#" },
-      { src: "", alt: "#" },
-      { src: "", alt: "#", full: true },
+      { src: "content/images/nin-publishing/nin-publishing_1.png", alt: "#" },
+      { src: "content/images/nin-publishing/nin-publishing_2.png", alt: "#" },
+      { src: "content/images/nin-publishing/nin-publishing_3.png", alt: "#" },
+      { src: "content/images/nin-publishing/nin-publishing_4.png", alt: "#" },
+      { src: "content/images/nin-publishing/nin-publishing_5.png", alt: "#" },
     ],
   },
   rusapr: {
@@ -275,11 +316,13 @@ const PROJECTS = {
     result:
       "Масштабный, удобный и структурированный сайт, эффективно закрывающий задачи бизнеса по презентации ПО, образовательных программ и взаимодействию с клиентами. ",
     figmaLink: "#",
-    heroImage: { src: "content/images/Overlay (11).png", alt: "#" },
+    heroImage: { src: "content/images/rusapr/rusapr_main.png", alt: "#" },
     images: [
-      { src: "", alt: "#" },
-      { src: "", alt: "#" },
-      { src: "", alt: "#", full: true },
+      { src: "content/images/rusapr/rusapr_1.png", alt: "#" },
+      { src: "content/images/rusapr/rusapr_2.png", alt: "#" },
+      { src: "content/images/rusapr/rusapr_3.png", alt: "#" },
+      { src: "content/images/rusapr/rusapr_4.png", alt: "#" },
+      { src: "content/images/rusapr/rusapr_5.png", alt: "#" },
     ],
   },
   sitepatrol: {
@@ -296,11 +339,16 @@ const PROJECTS = {
     result:
       "Для главной страницы были разработаны адаптивные версии. На основе существующего визуального направления самостоятельно спроектированы остальные страницы и интерфейсы: меню, страницы блога и статей, формы, страницы благодарности, FAQ и другие элементы сайта. В процессе была выстроена единая структура интерфейсов и адаптивов, чтобы все страницы выглядели целостно и последовательно.",
     figmaLink: "#",
-    heroImage: { src: "content/images/Overlay (12).png", alt: "#" },
+    heroImage: {
+      src: "content/images/sitepatrol/sitepatrol_main.png",
+      alt: "#",
+    },
     images: [
-      { src: "", alt: "#" },
-      { src: "", alt: "#" },
-      { src: "", alt: "#", full: true },
+      { src: "content/images/sitepatrol/sitepatrol_1.png", alt: "#" },
+      { src: "content/images/sitepatrol/sitepatrol_2.png", alt: "#" },
+      { src: "content/images/sitepatrol/sitepatrol_3.png", alt: "#" },
+      { src: "content/images/sitepatrol/sitepatrol_4.png", alt: "#" },
+      { src: "content/images/sitepatrol/sitepatrol_5.png", alt: "#" },
     ],
   },
   "sk-sfera": {
@@ -317,11 +365,13 @@ const PROJECTS = {
     result:
       "В результате были разработаны два самостоятельных лендинга с продуманной структурой, единым визуальным стилем и адаптацией под разные устройства. Проект сохранил связь с существующей айдентикой сайта, при этом каждая страница получила собственную структуру и подачу контента.",
     figmaLink: "#",
-    heroImage: { src: "content/images/Overlay (13).png", alt: "#" },
+    heroImage: { src: "content/images/sk-sfera/sk_sfera_main.png", alt: "#" },
     images: [
-      { src: "", alt: "#" },
-      { src: "", alt: "#" },
-      { src: "", alt: "#", full: true },
+      { src: "content/images/sk-sfera/sk-sfera_1.png", alt: "#" },
+      { src: "content/images/sk-sfera/sk-sfera_2.png", alt: "#" },
+      { src: "content/images/sk-sfera/sk-sfera_3.png", alt: "#" },
+      { src: "content/images/sk-sfera/sk-sfera_4.png", alt: "#" },
+      { src: "content/images/sk-sfera/sk-sfera_5.png", alt: "#" },
     ],
   },
 };

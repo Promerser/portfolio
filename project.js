@@ -5,19 +5,34 @@ const rawProject = PROJECTS[slug] || PROJECTS.b2bright;
 const rawImages =
   rawProject.images && rawProject.images.length
     ? rawProject.images
-    : [
-        { src: "" },
-        { src: "" },
-        { src: "", full: true },
-      ];
+    : [{ src: "" }, { src: "" }, { src: "" }];
 
 const galleryImages = rawImages.map((item) => ({ ...item }));
-if (!galleryImages.some((item) => item.full)) {
-  if (galleryImages.length === 1) {
-    galleryImages[0].full = true;
-  } else if (galleryImages.length === 3 || galleryImages.length === 5) {
-    galleryImages[2].full = true;
+
+// Шаблоны галереи по количеству изображений (десктоп):
+// 1  — на всю ширину, естественная высота
+// 3  — 1, 2 по половине ширины, 600px; 3-е на всю ширину,
+//       естественная высота
+// 5  — 1, 2 (и 4, 5) по половине ширины, 550px; 3-е на всю ширину,
+//       естественная высота (у delfanto — блок 1180px со скроллом)
+// 7  — 1, 2 на всю ширину, естественная высота; 3, 4 по половине, 880px;
+//       5, 6, 7 по трети, 580px
+function galleryClass(index, count) {
+  if (count === 1) {
+    return "span-6 auto";
   }
+  if (count === 3 || count === 5) {
+    if (index === 2) {
+      return slug === "delfanto" ? "span-6 h-1180" : "span-6 auto";
+    }
+    return count === 5 ? "span-3 h-550" : "span-3 h-600";
+  }
+  if (count === 7) {
+    if (index <= 1) return "span-6 auto";
+    if (index <= 3) return "span-3 h-880";
+    return "span-2 h-580";
+  }
+  return "span-3 h-600";
 }
 
 const project = {
@@ -138,6 +153,26 @@ if (!hasInfo) {
 }
 
 function createImage(item, index) {
+  if (item.srcTablet || item.srcMobile) {
+    const picture = document.createElement("picture");
+    if (item.srcMobile) {
+      const mobile = document.createElement("source");
+      mobile.media = "(max-width: 767px)";
+      mobile.srcset = item.srcMobile;
+      picture.appendChild(mobile);
+    }
+    if (item.srcTablet) {
+      const tablet = document.createElement("source");
+      tablet.media = "(min-width: 768px) and (max-width: 1024px)";
+      tablet.srcset = item.srcTablet;
+      picture.appendChild(tablet);
+    }
+    const img = document.createElement("img");
+    img.src = item.src;
+    img.alt = item.alt || "";
+    picture.appendChild(img);
+    return picture;
+  }
   if (item.src) {
     const img = document.createElement("img");
     img.src = item.src;
@@ -173,7 +208,7 @@ function createScrollIndicator() {
 
 project.images.forEach((item, index) => {
   const el = document.createElement("div");
-  el.className = item.full ? "gallery_item full" : "gallery_item";
+  el.className = "gallery_item " + galleryClass(index, galleryImages.length);
   const scroller = document.createElement("div");
   scroller.className = "gallery_item_scroll";
   const content = createImage(item, index);
@@ -193,11 +228,13 @@ project.images.forEach((item, index) => {
     }
   };
 
-  if (content.tagName === "IMG") {
-    if (content.complete) {
+  const imgEl =
+    content.tagName === "IMG" ? content : content.querySelector("img");
+  if (imgEl) {
+    if (imgEl.complete) {
       syncIndicator();
     } else {
-      content.addEventListener("load", syncIndicator);
+      imgEl.addEventListener("load", syncIndicator);
     }
   } else {
     syncIndicator();

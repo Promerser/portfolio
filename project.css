@@ -181,20 +181,46 @@
 
 .project_gallery {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(6, 1fr);
   gap: 40px 20px;
 }
 
 .gallery_item {
   position: relative;
-  height: 600px;
   border-radius: 16px;
   overflow: hidden;
 }
 
-.gallery_item.full {
-  grid-column: 1 / -1;
-  height: auto;
+.gallery_item.span-2 {
+  grid-column: span 2;
+}
+
+.gallery_item.span-3 {
+  grid-column: span 3;
+}
+
+.gallery_item.span-6 {
+  grid-column: span 6;
+}
+
+.gallery_item.h-600 {
+  height: 600px;
+}
+
+.gallery_item.h-550 {
+  height: 550px;
+}
+
+.gallery_item.h-880 {
+  height: 880px;
+}
+
+.gallery_item.h-580 {
+  height: 580px;
+}
+
+.gallery_item.h-1180 {
+  height: 1180px;
 }
 
 .gallery_item_scroll {
@@ -269,7 +295,178 @@
   opacity: 0.45;
 }
 
-.gallery_item.full .placeholder {
+.gallery_item.auto .placeholder {
   height: auto;
   aspect-ratio: 16 / 9;
+}
+
+/* ===== Project — планшет (768–1024), макет #1:14235 ===== */
+@media (min-width: 768px) and (max-width: 1024px) {
+  .project_page {
+    padding: 110px 16px 100px;
+  }
+
+  .project_breadcrumb {
+    margin-bottom: 32px;
+  }
+
+  .project_hero {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 24px;
+    margin-bottom: 32px;
+  }
+
+  .project_hero_text {
+    justify-content: flex-start;
+    gap: 12px;
+    min-height: auto;
+  }
+
+  .project_title {
+    font-size: 36px;
+  }
+
+  .project_desc {
+    gap: 12px;
+    font-size: 20px;
+  }
+
+  .project_info {
+    margin-bottom: 60px;
+  }
+
+  .project_info_rows {
+    border-bottom: none;
+  }
+
+  .project_info_row {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .project_info_row p {
+    font-size: 18px;
+  }
+
+  .project_info_list {
+    font-size: 18px;
+  }
+
+  .project_figma_link {
+    width: auto;
+    height: auto;
+    align-self: flex-start;
+  }
+
+  .project_gallery {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .gallery_item,
+  .gallery_item.h-600,
+  .gallery_item.h-550,
+  .gallery_item.h-880,
+  .gallery_item.h-580,
+  .gallery_item.h-1180 {
+    height: auto;
+    border-radius: 11.63px;
+  }
+}
+
+/* ===== Project — мобилка (≤767), макет #1:18076 ===== */
+@media (max-width: 767px) {
+  .project_page {
+    padding: 110px 16px 100px;
+  }
+
+  .project_breadcrumb {
+    padding-bottom: 24px;
+    margin-bottom: 24px;
+  }
+
+  .project_hero {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 16px;
+    margin-bottom: 24px;
+  }
+
+  .project_hero_text {
+    justify-content: flex-start;
+    gap: 12px;
+    min-height: auto;
+  }
+
+  .project_title {
+    font-size: 22px;
+  }
+
+  .project_desc {
+    gap: 12px;
+    font-size: 16px;
+    line-height: 120%;
+  }
+
+  .project_hero_image {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 308 / 211.08;
+    border-radius: 6.57px;
+  }
+
+  .project_info {
+    margin-bottom: 42px;
+  }
+
+  .project_info_rows {
+    border-bottom: none;
+  }
+
+  .project_info_row {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    padding: 24px 0;
+  }
+
+  .project_info_row p {
+    font-size: 16px;
+    line-height: 120%;
+  }
+
+  .project_info_list {
+    font-size: 16px;
+    line-height: 120%;
+  }
+
+  .project_figma_link {
+    width: auto;
+    height: auto;
+    padding: 8px 12px;
+    font-size: 14px;
+    letter-spacing: 0.05em;
+    align-self: flex-start;
+  }
+
+  .project_gallery {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .gallery_item,
+  .gallery_item.h-600,
+  .gallery_item.h-550,
+  .gallery_item.h-880,
+  .gallery_item.h-580,
+  .gallery_item.h-1180 {
+    height: auto;
+    border-radius: 4.87px;
+  }
 }
