@@ -155,7 +155,7 @@ p.about_city {
   .about_first {
     flex-direction: column;
     gap: 32px;
-    padding: 40px 16px 136px;
+    padding: 110px 16px 136px;
   }
 
   .about_photo {
@@ -215,5 +215,113 @@ p.about_city {
   .third {
     gap: 32px;
     padding: 0 16px;
+  }
+}
+
+/* ===== About — мобилка (≤767), макет #1:2991 ===== */
+@media (max-width: 767px) {
+  .about_first {
+    flex-direction: column;
+    gap: 24px;
+    padding: 110px 16px 60px;
+  }
+
+  .about_photo {
+    width: 200px;
+    height: 200px;
+    border-radius: 5.42px;
+  }
+
+  .about_text {
+    align-items: stretch;
+    gap: 12px;
+    justify-content: flex-start;
+  }
+
+  .about_text p {
+    font-size: 16px;
+    line-height: 120%;
+  }
+
+  p.about_label {
+    line-height: 130%;
+  }
+
+  .about_first h1 {
+    font-size: 24px;
+  }
+
+  p.about_city {
+    font-size: 18px;
+    line-height: 130%;
+  }
+
+  .second_skills {
+    padding: 0 16px;
+  }
+
+  .skills {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 24px;
+    padding: 32px 0;
+  }
+
+  .skills h1 {
+    font-size: 22px;
+    letter-spacing: 0.35px;
+  }
+
+  .skills h2 {
+    font-size: 18px;
+  }
+
+  .skills p {
+    font-size: 16px;
+    line-height: 120%;
+  }
+
+  .skills_list {
+    gap: 24px;
+  }
+
+  .skill_block {
+    align-items: stretch;
+    padding: 0;
+  }
+
+  .tools_row {
+    flex-wrap: wrap;
+    row-gap: 30px;
+  }
+
+  .third {
+    gap: 24px;
+    padding: 64px 16px 60px;
+  }
+
+  .third h1 {
+    letter-spacing: 0.35px;
+  }
+
+  .third_content {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 24px;
+  }
+
+  .third_line {
+    width: 100%;
+    height: 1px;
+  }
+
+  .third_card {
+    width: 100%;
+    align-items: stretch;
+  }
+
+  .third_card_text {
+    align-items: stretch;
   }
 }
