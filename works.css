@@ -105,3 +105,94 @@ h1 {
 .project_card > a:last-child {
   opacity: 0.65;
 }
+
+/* ===== Works — планшет (768–1024), макет #1:2570 ===== */
+@media (min-width: 768px) and (max-width: 1024px) {
+  .works {
+    gap: 32px;
+    padding: 130px 16px 92px;
+  }
+
+  h1 {
+    font-size: 36px;
+  }
+
+  .filters {
+    gap: 48px;
+    padding-bottom: 16px;
+    border-bottom: 3px solid var(--line);
+  }
+
+  .filters button {
+    padding: 12px 20px;
+  }
+
+  .projects {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px 20px;
+  }
+
+  .project_card {
+    gap: 12px;
+  }
+
+  .project_card img {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 358 / 246;
+  }
+
+  .project_info {
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 4px;
+  }
+}
+
+/* ===== Works — мобилка (≤767), макет #1:2618 ===== */
+@media (max-width: 767px) {
+  .works {
+    gap: 24px;
+    padding: 110px 16px 66px;
+  }
+
+  h1 {
+    font-size: 22px;
+    letter-spacing: 0.35px;
+  }
+
+  .filters {
+    gap: 32px;
+    padding-bottom: 16px;
+    border-bottom: 3px solid var(--line);
+  }
+
+  .filters button {
+    padding: 12px 20px;
+  }
+
+  .projects {
+    grid-template-columns: 1fr;
+    gap: 32px;
+    /* в макете от линии до первой карточки ~34px (24px gap + 10px) */
+    margin-top: 10px;
+  }
+
+  .project_card {
+    gap: 12px;
+  }
+
+  .project_card img {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 308 / 212;
+  }
+
+  .project_info {
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 4px;
+  }
+}
