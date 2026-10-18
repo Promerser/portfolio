@@ -58,8 +58,9 @@ h1 {
 }
 
 .project_card img {
-  width: 570px;
-  height: 392px;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 570 / 392;
   border-radius: 14px;
   object-fit: cover;
 }
