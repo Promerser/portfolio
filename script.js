@@ -29,3 +29,25 @@ if (scrollButton) {
   });
 }
 
+const filters = document.querySelector(".filters");
+if (filters) {
+  const cards = Array.from(document.querySelectorAll(".project_card"));
+
+  filters.addEventListener("click", (e) => {
+    const btn = e.target.closest(".filter");
+    if (!btn) {
+      return;
+    }
+
+    filters
+      .querySelectorAll(".filter")
+      .forEach((b) => b.classList.toggle("active", b === btn));
+
+    const key = btn.dataset.filter;
+    cards.forEach((card) => {
+      card.style.display =
+        key === "all" || card.dataset.category === key ? "" : "none";
+    });
+  });
+}
+
