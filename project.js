@@ -241,7 +241,9 @@ function syncRowHeights() {
     if (min === 0) {
       return;
     }
-    row.forEach((el) => (el.style.height = min + "px"));
+    // потолок: два длинных изображения в строке не дают гигантский блок
+    const h = Math.min(min, 1080);
+    row.forEach((el) => (el.style.height = h + "px"));
   });
 }
 
