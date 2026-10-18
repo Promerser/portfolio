@@ -4,6 +4,24 @@
   padding: 165px 64px 100px 64px;
 }
 
+.project_back {
+  align-self: flex-start;
+  margin-bottom: 42px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 112px;
+  height: 37px;
+  padding: 0;
+
+  font-family: "ibm_plex_mono";
+  font-size: 16px;
+  line-height: 120%;
+  letter-spacing: 3%;
+  text-transform: uppercase;
+}
+
 .project_breadcrumb {
   display: flex;
   align-items: center;
@@ -302,6 +320,10 @@
 
 /* ===== Project — планшет (768–1024), макет #1:14235 ===== */
 @media (min-width: 768px) and (max-width: 1024px) {
+  .project_back {
+    display: none;
+  }
+
   .project_page {
     padding: 110px 16px 100px;
   }
@@ -380,6 +402,10 @@
 
 /* ===== Project — мобилка (≤767), макет #1:18076 ===== */
 @media (max-width: 767px) {
+  .project_back {
+    display: none;
+  }
+
   .project_page {
     padding: 110px 16px 100px;
   }

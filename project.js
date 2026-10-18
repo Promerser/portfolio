@@ -62,6 +62,15 @@ const bcYear = document.getElementById("bc_year");
 bcYear.style.display = hasYear ? "" : "none";
 bcYear.textContent = project.year;
 
+document.getElementById("project_back").addEventListener("click", (e) => {
+  e.preventDefault();
+  if (history.length > 1) {
+    history.back();
+  } else {
+    window.location.href = "works.html";
+  }
+});
+
 document.getElementById("project_title").textContent = project.title;
 
 const descEl = document.getElementById("project_desc");
