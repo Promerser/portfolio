@@ -206,7 +206,12 @@
 .gallery_item {
   position: relative;
   border-radius: 16px;
-  overflow: hidden;
+
+  /* коробка по высоте картинки (без пустоты); длинные — со скроллом */
+  align-self: start;
+  overflow-y: auto;
+  scrollbar-width: thin;
+  scrollbar-color: var(--line) transparent;
 }
 
 .gallery_item.span-2 {
@@ -219,33 +224,6 @@
 
 .gallery_item.span-6 {
   grid-column: span 6;
-}
-
-.gallery_item.h-600 {
-  height: 600px;
-}
-
-.gallery_item.h-550 {
-  height: 550px;
-}
-
-.gallery_item.h-880 {
-  height: 880px;
-}
-
-.gallery_item.h-580 {
-  height: 580px;
-}
-
-.gallery_item.h-1180 {
-  height: 1180px;
-}
-
-.gallery_item_scroll {
-  height: 100%;
-  overflow-y: auto;
-  scrollbar-width: thin;
-  scrollbar-color: var(--line) transparent;
 }
 
 .gallery_item img {
@@ -396,6 +374,7 @@
   .gallery_item.h-580,
   .gallery_item.h-1180 {
     height: auto;
+    align-self: stretch;
     border-radius: 11.63px;
   }
 }
@@ -493,6 +472,7 @@
   .gallery_item.h-580,
   .gallery_item.h-1180 {
     height: auto;
+    align-self: stretch;
     border-radius: 4.87px;
   }
 }

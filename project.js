@@ -215,6 +215,36 @@ function createScrollIndicator() {
   return indicator;
 }
 
+function syncRowHeights() {
+  const items = Array.from(gallery.children);
+  if (window.innerWidth <= 1024) {
+    items.forEach((el) => (el.style.height = ""));
+    return;
+  }
+
+  const byRow = new Map();
+  items.forEach((el) => {
+    const row = byRow.get(el.offsetTop) || [];
+    row.push(el);
+    byRow.set(el.offsetTop, row);
+  });
+
+  byRow.forEach((row) => {
+    if (row.length < 2) {
+      return;
+    }
+    // высота картинки, а не scrollHeight контейнера: тот не бывает меньше
+    // уже выставленной высоты, и при уменьшении окна строка залипала
+    const min = Math.min(
+      ...row.map((el) => el.firstElementChild.firstElementChild.offsetHeight)
+    );
+    if (min === 0) {
+      return;
+    }
+    row.forEach((el) => (el.style.height = min + "px"));
+  });
+}
+
 project.images.forEach((item, index) => {
   const el = document.createElement("div");
   el.className = "gallery_item " + galleryClass(index, galleryImages.length);
@@ -226,7 +256,8 @@ project.images.forEach((item, index) => {
   gallery.appendChild(el);
 
   const syncIndicator = () => {
-    const scrollable = scroller.scrollHeight > scroller.clientHeight;
+    syncRowHeights();
+    const scrollable = el.scrollHeight > el.clientHeight;
     if (scrollable && !el.querySelector(".scroll_indicator")) {
       el.appendChild(createScrollIndicator());
     } else if (!scrollable) {
