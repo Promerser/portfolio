@@ -857,8 +857,8 @@ footer a {
   }
 
   .first_text h1 {
-    /* 24px из макета (Uncial Antiqua) — берём размер, при котором Unbounded вписывается в 3 строки */
-    font-size: 16px;
+    /* тот же размер, что на планшете */
+    font-size: clamp(38px, 5vw, 46px);
   }
 
   .first_buttons {
@@ -881,8 +881,8 @@ footer a {
   }
 
   .second h1 {
-    font-size: 22px;
-    letter-spacing: 0.22px;
+    font-size: 36px;
+    letter-spacing: 0.35px;
   }
 
   .second_link {
@@ -925,8 +925,8 @@ footer a {
   }
 
   .third h1 {
-    font-size: 22px;
-    letter-spacing: 0.22px;
+    font-size: 36px;
+    letter-spacing: 0.35px;
   }
 
   footer {
