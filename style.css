@@ -840,6 +840,11 @@ footer a {
     font-size: 12px;
   }
 
+  header p {
+    /* имя в две строки: ДИНАРА / СИРАЗТДИНОВА */
+    width: min-content;
+  }
+
   .first {
     /* stretch: чтобы текст переносился по ширине экрана,
        а блок не растягивался до max-content (465px+) и не вылезал за экран */
@@ -857,8 +862,7 @@ footer a {
   }
 
   .first_text h1 {
-    /* тот же размер, что на планшете */
-    font-size: clamp(38px, 5vw, 46px);
+    font-size: 24px;
   }
 
   .first_buttons {
@@ -881,7 +885,7 @@ footer a {
   }
 
   .second h1 {
-    font-size: 36px;
+    font-size: 24px;
     letter-spacing: 0.35px;
   }
 
@@ -925,7 +929,7 @@ footer a {
   }
 
   .third h1 {
-    font-size: 36px;
+    font-size: 24px;
     letter-spacing: 0.35px;
   }
 
